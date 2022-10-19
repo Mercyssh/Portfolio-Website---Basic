@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* info container */
+#info {
+    position: absolute;
+    background-color: #181818;
+    width: 100vw;
+    height: 100vh;
+
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 25px;
+
+    color: white;
+}
+
+#info * {
+    z-index: 3;
+}
+
+/* Welcome im om */
+#info h3 {
+    font-size: 60px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition-delay: 400ms;
+}
+
+/* Game and experience designer */
+#info p {
+    margin-top: -10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 3px;
+
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    transition-delay: 1400ms;
+}
+
+/* icon container */
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    transition-delay: 1600ms;
+}
+
+/* Link icons */
+#info img {
+    height: 16px;
+    cursor: pointer;
+}
+
+#info img:hover {
+    -webkit-filter: invert();
+    filter: invert();
+}
+
+/* To hide */
+.infohidden {
+    opacity: 0;
+    transform: translate(0%, -20px);
+}
+
+/* Background */
+#background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    /* The mask */
+    clip-path: url(#clipper);
+    overflow: hidden;
+
+    /* user-drag: none; */
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#background img {
+    width: 100%;
+    z-index: 0;
+
+    /* user-drag: none; */
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Mask */
+#blob {
+    position: absolute;
+    z-index: 5;
+}
+
+/* Prompt to hold left click */
+#hoverprompt {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    opacity: 1;
+    color: white;
+    z-index: 6;
+    transition: opacity 0.1s ease-in-out;
+
+    width: max-content;
+    height: max-content;
+
+    user-select: none;
+
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    opacity: 0 !important;
+    transition-delay: 3000ms;
+}
